@@ -21,17 +21,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
-<c:if test="${sessionID != null }">
-		<script>
-			alert("이미 로그인 중입니다.");
-			location.href = "base.jsp";
-		</script>
-	</c:if>
-		<c:if test="${ loginResult == -1 || loginResult == 0 }">
-		<script>
-			alert("아이디 혹은 비밀번호가 틀렸습니다.");
-		</script>
-	</c:if>
+
     <!-- 광고배너 자리 -->
 
     <header>

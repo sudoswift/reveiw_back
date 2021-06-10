@@ -31,8 +31,10 @@
 </head>
 <body>
 <c:if test="${sessionID != null }">
-	${sessionID } 로그인 중입니다!<br />
-	<a href="logout.do"><button>로그아웃</button></a>
+	<div style="text-align: center;">
+	${sessionID } 로그인 중입니다!<br>
+	<a href="logout.do"><button type="button" class="btn btn-info">로그아웃</button></a>
+	</div>
 </c:if>
 
     

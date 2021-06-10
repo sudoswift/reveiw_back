@@ -7,9 +7,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-public class logoutController extends HttpServlet {
+public class HomeController extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -21,12 +20,9 @@ public class logoutController extends HttpServlet {
 		process(req, resp);
 	}
 	
-	private void process(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		HttpSession session = req.getSession();
-		session.invalidate();
-		
-		RequestDispatcher rd = req.getRequestDispatcher("home.do");
+	public void process(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		RequestDispatcher rd = req.getRequestDispatcher("/base.jsp");
 		rd.forward(req, resp);
 	}
-	
+
 }
