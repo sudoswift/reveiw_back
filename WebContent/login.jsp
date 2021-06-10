@@ -21,6 +21,17 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
+<c:if test="${sessionID != null }">
+		<script>
+			alert("이미 로그인 중입니다.");
+			location.href = "base.jsp";
+		</script>
+	</c:if>
+		<c:if test="${ loginResult == -1 || loginResult == 0 }">
+		<script>
+			alert("아이디 혹은 비밀번호가 틀렸습니다.");
+		</script>
+	</c:if>
     <!-- 광고배너 자리 -->
 
     <header>
@@ -48,14 +59,14 @@
             <h4>로그인</h4>
         </div>
         <div style="margin-left: 35rem; margin-right:35rem;"><!-- USE BOOTSTRAP -->
-            <form action="base.jsp">
+            <form action="login.do" method="post">
                 <div class="form-group">
                         <label for="user_email">이메일 주소 </label>
-                        <input type="text" class="form-control" id="user_email" aria-describedby="emailHelp" placeholder="Enter email">
+                        <input type="text" class="form-control" id="user_email" aria-describedby="emailHelp" placeholder="아이디를 입력하세요." name="id">
                 </div>
                 <div class="form-group">
-                  <label for="pw">Password</label>
-                  <input type="password" class="form-control" id="pw" placeholder="Password">
+                  <label for="pwd">Password</label>
+                  <input type="password" class="form-control" id="pwd" placeholder="비밀번호를 입력하세요." name="pwd">
                 </div>
                 <div class="form-check">
                   <input type="checkbox" class="form-check-input" id="remeber">
