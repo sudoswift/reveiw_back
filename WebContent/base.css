@@ -1,0 +1,60 @@
+.fa {
+    padding: .5rem;
+    font-size: 5rem;
+    width: 3rem;
+    text-align: center;
+    text-decoration: none;
+  }
+/* footer's facebook logo */
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+/* footer's twitter logo */
+.fa-twitter {
+background: #55ACEE;
+color: white;
+}
+/* footer's instagram logo */
+.fa-instagram {
+    background: #d82b7d;
+    color: white;
+    }
+/* footer's github logo */
+.fa-github {
+    background: black;
+    color: white;
+    }
+/* header's home icon btn */
+.btn-default{
+    font-size: 5rem;
+}
+/* top_banner */
+#top_banner{
+    z-index: 2;
+    font-size: 17px;
+    background-color: #f0ede5;
+    color: #000;
+    width: 100%;
+    padding: 0;
+    letter-spacing: 1px;
+    text-align: center;
+}
+/* a tag contr */
+a{
+    color: black;
+    text-decoration: none
+}
+/* google icons on banner */
+.banner_icons{
+    width: 52px;
+    font-size: 22px;
+    padding-top: 11px;
+    padding-bottom: 13px;
+}
+.carousel-item{
+    height: 32rem;
+    background: #777;
+    color: white;
+    position: relative;
+}
