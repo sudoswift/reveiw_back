@@ -36,7 +36,7 @@ public class JoinController extends HttpServlet {
 		mDto.setName(name);
 		mDto.setBirthday(birthday);
 		int joinResult = mDao.join(mDto);
-		
+		System.out.println("join result");
 		if (joinResult == 1) {
 			req.setAttribute("joinResult", joinResult);
 			HttpSession session = req.getSession();

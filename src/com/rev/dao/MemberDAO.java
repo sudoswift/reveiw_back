@@ -26,7 +26,7 @@ public class MemberDAO {
 		return mDao;
 	}
 	public Connection getConnection() {
-		String url = "jdbc:mysql://localhost/review?serverTimezone=UTC";
+		String url = "jdbc:mysql://localhost/review?characterEncoding=UTF-8&serverTimezone=UTC";
 		String id = "root", pw = "0000";
 		
 		try {
@@ -67,7 +67,8 @@ public class MemberDAO {
 	public int join(MemberVO mDto) {
 		con = this.getConnection();
 		StringBuffer query = new StringBuffer();
-		query.append("insert into member values(?,?,?,?)");
+		query.append("insert into login values(?,?,?,?)");
+		System.out.println("join");
 		try {
 			pstmt = con.prepareStatement(query.toString());
 			pstmt.setString(1, mDto.getId());
@@ -81,6 +82,7 @@ public class MemberDAO {
 			this.close(con, pstmt, null);
 		}
 		return result;
+		
 	}
 	
 }
