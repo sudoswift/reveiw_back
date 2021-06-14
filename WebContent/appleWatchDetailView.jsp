@@ -68,7 +68,7 @@
         <input type="submit" class="btn btn-info" value="리뷰 등록">
     </div>
 </form>
-
+ 
 
 <!-- 상풍 이미지 끝 -->
 
