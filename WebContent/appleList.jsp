@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ page import="java.sql.*" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -28,6 +29,20 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <!-- new end -->
+<%			
+	String url = "jdbc:mysql://localhost/review?characterEncoding=UTF-8&serverTimezone=UTC";
+	String user = "root";
+	String passwd = "0000" ;
+	String sql = "select * from comment3" ;
+	PreparedStatement psmt = null;
+	
+	Class.forName("com.mysql.cj.jdbc.Driver");
+	
+	Connection con = DriverManager.getConnection(url, user, passwd);
+	
+	psmt = con.prepareStatement(sql);
+	ResultSet rs =psmt.executeQuery();
+%>
 </head>
 <body>
     
@@ -52,21 +67,31 @@
 <!-- 상품 이미지 시작 -->
 
 <div style="padding-bottom: 5rem;">
-    <img src="https://raw.githubusercontent.com/sudoswift/review_project/master/keychron.jpeg" alt="iMac" style="width:100%;">
+    <img src="https://raw.githubusercontent.com/sudoswift/review_project/master/appleWatch.png" alt="appleWatch" style="width:100%;">
 </div>
 <p align="middle">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/yN7SjmEL-5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7VV-NuQ33es" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
-<div style="text-align: center; background: rgb(180, 172, 172); height:auto;">
-    <p>(2021-06-08) 이서현 : 적축과 갈축 중 어떤 것을 더 추천하세요?</p>
-</div>
-<form action="keyWrite.jsp" method="get">
+            <%  
+        while(rs.next()) {
+    		String memo = rs.getString("memo");
+    		out.print("<div style=\"text-align: center; background: rgb(180, 172, 172); height:auto;\">"
+            + "<p>" + memo + "</p>" + "</div>");
+    	}
+        %>
+		<%
+		rs.close();
+		psmt.close();
+		con.close();
+		%>
+<form action="appleWrite.jsp" method="get">
     <div class="form-group" style="margin-left: 40rem; margin-right: 40rem;">
-        <label for="keyComment">리뷰를 입력해주세요 :</label>
-        <input type="text" class="form-control" name="keyComment">
+        <label for="appleWrite">리뷰를 입력해주세요 :</label>
+        <input type="text" class="form-control" id="appleWrite">
         <input type="submit" class="btn btn-info" value="리뷰 등록">
     </div>
 </form>
+
 
 <!-- 상풍 이미지 끝 -->
 

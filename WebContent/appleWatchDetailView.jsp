@@ -61,10 +61,10 @@
     <p>(2021-06-08) 이서현 : 애플워치 스트랩 중에 어떤 색을 추천하세요?</p>
     <p>(2021-06-08) 박서현 : 애플워치랑 갤럭시 워치의 차이점이 뭔가요?</p>
 </div>
-<form action="">
+<form action="appleWrite.jsp" method="get">
     <div class="form-group" style="margin-left: 40rem; margin-right: 40rem;">
-        <label for="comment">리뷰를 입력해주세요 :</label>
-        <input type="text" class="form-control" id="comment">
+        <label for="appleWrite">리뷰를 입력해주세요 :</label>
+        <input type="text" class="form-control" name="appleWrite">
         <input type="submit" class="btn btn-info" value="리뷰 등록">
     </div>
 </form>
