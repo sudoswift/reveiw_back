@@ -54,6 +54,11 @@
     <div style="padding-bottom: 5rem;">
         <img src="https://raw.githubusercontent.com/sudoswift/review_project/master/iMac.png" alt="iMac" style="width:100%;">
     </div>
+    
+    <p align="middle">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Nwv7abh2g-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </p>
+    
     <div style="text-align: center; background: rgb(180, 172, 172); height:auto;">
         <p>(2021-06-08) 이서현 : 색깔은 어떤 색이 있죠?</p>
     </div>

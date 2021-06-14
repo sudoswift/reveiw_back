@@ -54,6 +54,9 @@
 <div style="padding-bottom: 5rem;">
     <img src="https://raw.githubusercontent.com/sudoswift/review_project/master/keychron.jpeg" alt="iMac" style="width:100%;">
 </div>
+<p align="middle">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yN7SjmEL-5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
 <div style="text-align: center; background: rgb(180, 172, 172); height:auto;">
     <p>(2021-06-08) 이서현 : 적축과 갈축 중 어떤 것을 더 추천하세요?</p>
 </div>

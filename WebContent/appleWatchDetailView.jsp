@@ -54,6 +54,9 @@
 <div style="padding-bottom: 5rem;">
     <img src="https://raw.githubusercontent.com/sudoswift/review_project/master/appleWatch.png" alt="appleWatch" style="width:100%;">
 </div>
+<p align="middle">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7VV-NuQ33es" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
 <div style="text-align: center; background: rgb(180, 172, 172); height:auto;">
     <p>(2021-06-08) 이서현 : 애플워치 스트랩 중에 어떤 색을 추천하세요?</p>
     <p>(2021-06-08) 박서현 : 애플워치랑 갤럭시 워치의 차이점이 뭔가요?</p>
