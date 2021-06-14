@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -28,6 +29,20 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <!-- new end -->
+<%			
+	String url = "jdbc:mysql://localhost/review?characterEncoding=UTF-8&serverTimezone=UTC";
+	String user = "root";
+	String passwd = "0000" ;
+	String sql = "select * from comment" ;
+	PreparedStatement psmt = null;
+	
+	Class.forName("com.mysql.cj.jdbc.Driver");
+	
+	Connection con = DriverManager.getConnection(url, user, passwd);
+	
+	psmt = con.prepareStatement(sql);
+	ResultSet rs =psmt.executeQuery();
+%>
 </head>
 <body>
     
@@ -60,12 +75,24 @@
     </p>
     
     <div style="text-align: center; background: rgb(180, 172, 172); height:auto;">
-        <p>(2021-06-08) 이서현 : 색깔은 어떤 색이 있죠?</p>
+        <p>memo</p>
     </div>
+            <%  
+        while(rs.next()) {
+    		String memo = rs.getString("memo");
+    		out.print("<div style=\"text-align: center; background: rgb(180, 172, 172); height:auto;\">"
+            + "<p>" + memo + "</p>" + "</div>");
+    	}
+        %>
+		<%
+		rs.close();
+		psmt.close();
+		con.close();
+		%>
     <form action="imac_write.jsp" method="get">
         <div class="form-group" style="margin-left: 40rem; margin-right: 40rem;">
-            <label for="imacComment">리뷰를 입력해주세요 :</label>
-            <input type="text" class="form-control" name="imacComment">
+            <label for="comment">리뷰를 입력해주세요 :</label>
+            <input type="text" class="form-control" id="imacComment">
             <input type="submit" class="btn btn-info" value="리뷰 등록">
         </div>
     </form>
